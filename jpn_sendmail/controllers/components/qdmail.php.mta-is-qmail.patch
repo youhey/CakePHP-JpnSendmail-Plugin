@@ -1,0 +1,31 @@
+*** qdmail.php.org
+--- qdmail.php
+***************
+*** 106,112 ****
+  	//----------------------------
+  	var	$LFC				=  "\r\n";// Notice: CRLF ,If you failed, change to "\n"
+  	var $LFC_Qmail			=  null;
+! 	var $is_qmail			=  null;
+  	var $language			= 'ja';
+  	var $kana				=  false; // kana header
+  	//----------
+--- 106,112 ----
+  	//----------------------------
+  	var	$LFC				=  "\r\n";// Notice: CRLF ,If you failed, change to "\n"
+  	var $LFC_Qmail			=  null;
+! 	var $is_qmail			=  true;
+  	var $language			= 'ja';
+  	var $kana				=  false; // kana header
+  	//----------
+***************
+*** 4117,4120 ****
+  		}
+  	return true;
+  	}
+! }?>
+\ ファイル末尾に改行がありません
+--- 4117,4120 ----
+  		}
+  	return true;
+  	}
+! }?>

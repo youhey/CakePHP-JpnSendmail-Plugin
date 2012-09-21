@@ -1,0 +1,19 @@
+*** qdmail.php.org
+--- qdmail.php
+***************
+*** 3764,3770 ****
+  		}
+  
+  		if( !class_exists ( 'QdsmtpComponent' ) ){
+! 			if( !$this->import( 'Component' , 'Qdsmtp' ) ){
+  				return $this->errorGather('Qdmail<->CakePHP Component Load Error , the name is Qdsmtp',__LINE__);
+  			}
+  		}
+--- 3764,3770 ----
+  		}
+  
+  		if( !class_exists ( 'QdsmtpComponent' ) ){
+! 			if( !$this->import( 'Component' , 'JpnSendmail.Qdsmtp' ) ){
+  				return $this->errorGather('Qdmail<->CakePHP Component Load Error , the name is Qdsmtp',__LINE__);
+  			}
+  		}

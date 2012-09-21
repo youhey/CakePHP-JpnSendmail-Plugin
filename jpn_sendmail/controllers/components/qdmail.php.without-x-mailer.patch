@@ -1,0 +1,22 @@
+*** qdmail.php.org
+--- qdmail.php
+***************
+*** 2014,2030 ****
+  		if($this->debug > 0 ){
+  			$this->header['X-QdmailDebug'] = trim(chunk_split ( base64_encode($this->iniGather()) , $this->mime_encode_max ,  $this->LFC."\t" ));
+  		}
+- 		$this->header['X-'.$this->xmailer] = trim('version-'.$this->version . ' ' . $this->license .' http://hal456.net/qdmail PHPver '.PHP_VERSION);
+- 		if($this->smtp){
+- 			$sendby = 'SMTP';
+- 		}elseif($this->sendmail && !ini_get('SafeMode')){
+- 			$sendby = 'Sendmail';
+- 		}elseif($this->sendmail && ini_get('SafeMode')){
+- 			$sendby = 'MailFunction but Sendmail if no Safemode';
+- 		}else{
+- 			$sendby = 'MailFunction';
+- 		}
+- 		$this->header['X-'.$this->xmailer] .= $this->LFC . chr(9) . 'send-by '.$sendby;
+  	}
+  	function makeMessageId(){
+  		$req_uri = empty($_SERVER['REQUEST_URI']) ? '':$_SERVER['REQUEST_URI'];
+--- 2014,2019 ----
